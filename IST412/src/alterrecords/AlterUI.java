@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package alterrecords;
 
-/**
- *
- * @author joseph
- */
 public class AlterUI {
+    
+    private final AlterCntl alterCntl;
+    
+    /**
+     * This is the default constructor for the AlterUI class.
+     */
+    public AlterUI(AlterCntl alterCntl) {
+        this.alterCntl = alterCntl;
+    }
     
 }
