@@ -10,7 +10,7 @@ package CalcInsuranceCoverage;
  * @author Bryan
  */
 public class InsuranceCntl {
-    Insurance insurance = new Insurance();
+    Insurance insurance = new Insurance(0,"",0,"");
     
     public InsuranceCntl(){
         

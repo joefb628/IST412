@@ -8,9 +8,14 @@ public class Record {
     
     /**
      * This is the default constructor for the Record class.
+     * @param ID
+     * @param fName
+     * @param lName
      */
-    public Record() {
-        
+    public Record(int ID, String fName, String lName) {
+        ID = patientID;
+        fName = firstName;
+        lName = lastName;
     }
     
     /**
@@ -18,7 +23,7 @@ public class Record {
      * @return An int representing the patient ID from the record.
      */
     public int getPatientID() {
-        return 101;
+        return patientID;
     }
     
     /**
@@ -26,8 +31,7 @@ public class Record {
      * @return A string representing the first name from the record.
      */
     public String getFirstName() {
-        String fName = "John";
-        return fName;
+        return firstName;
     }
     
      /**
@@ -35,8 +39,7 @@ public class Record {
      * @return A string representing the last name from the record.
      */
     public String getLastName() {
-        String lName = "Doe";
-        return lName;
+        return lastName;
     }
     
     /**

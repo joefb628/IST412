@@ -15,8 +15,11 @@ public class Insurance {
     private int priceOfTreatment;
     private String customerID;
 
-    public Insurance(){
-        
+    public Insurance(int insuranceID, String treatment, int priceOfTreatment, String customerID){
+        this.insuranceID = insuranceID;
+        this.treatment = treatment;
+        this.priceOfTreatment = priceOfTreatment;
+        this.customerID = customerID;
     }
     
     public int getPriceList(String customerID, String treatment){
