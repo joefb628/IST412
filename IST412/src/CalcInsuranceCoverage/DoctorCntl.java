@@ -10,9 +10,9 @@ package CalcInsuranceCoverage;
  * @author Bryan
  */
 public class DoctorCntl {
-    Doctor doctor = new Doctor();
+    Doctor doctor = new Doctor(0, "ABC1", "ABC1", "treatment");
     
     public DoctorCntl(){
-        
+       
     }
 }
