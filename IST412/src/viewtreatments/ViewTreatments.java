@@ -20,7 +20,7 @@ public class ViewTreatments
     
     public ViewTreatments()
     {
- 
+        j.add("Warm Compress every 4 hours.");
     }
     
     

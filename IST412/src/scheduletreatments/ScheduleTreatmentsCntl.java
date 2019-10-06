@@ -19,6 +19,6 @@ public class ScheduleTreatmentsCntl
     
     public ScheduleTreatmentsCntl()
     {
-        
+        String userFullName = st.getUser(100);
     }
 }
