@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ist.pkg412.medical.application.viewtreatments;
+package viewtreatments;
 
-import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 /**
  *
@@ -13,22 +13,18 @@ import java.util.ArrayList;
  */
 public class ViewTreatmentsCntl 
 {
-    ViewTreatments vt = new ViewTreatments();
-    ViewTreatmentsView vtv = new ViewTreatmentsView();
-    ArrayList<String>treatments = new ArrayList<String>();
-    
     /**
      * Constructor for the ViewTreatmentsCntl class
      */
     
-    public ViewTreatmentsCntl()
-    {
-        treatments = vt.getTreatments(0);
-    }
+    PriorityQueue<String> treatments = new PriorityQueue<>();
 
-    public ArrayList<String> getTreatments() {
+    public ViewTreatmentsCntl() {
+        ViewTreatments vt = new ViewTreatments();
+        treatments = vt.getTreatments();
+        ViewTreatmentsView vtv = new ViewTreatmentsView(treatments);
+    }
+    public PriorityQueue<String> getTreatments() {
         return treatments;
     }
-    
-    
 }

@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ist.pkg412.medical.application.viewtreatments;
+package viewtreatments;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 /**
  *
@@ -13,16 +14,18 @@ import java.util.ArrayList;
  */
 public class ViewTreatments 
 {
-    ArrayList<String> j = new ArrayList<String>();
-    /**
-    *The constructor of the ViewTreatments class
-    */
+    PriorityQueue<String> treatments = new PriorityQueue<>();
     
-    public ViewTreatments()
-    {
-        j.add("Warm Compress every 4 hours.");
+    public ViewTreatments() {
+        populateQueue();
     }
     
+    private void populateQueue(){
+        treatments.add("20CCs of Vicodin");
+        treatments.add("Warm compress every 2 hours");
+        treatments.add("Take 2 Advil every 4 hours");
+        treatments.add("Ice every 20 minutes");
+    }
     
     /**
      * receives the list of treatments 
@@ -32,6 +35,10 @@ public class ViewTreatments
     {
         
     }
+
+    public PriorityQueue<String> getTreatments() {
+        return treatments;
+    }
     
     /**
      * gets the list of treatments so that it is viewable in other classes
@@ -39,10 +46,7 @@ public class ViewTreatments
      * takes the "type" input for better organization
      */
     
-    public ArrayList<String> getTreatments(int Type)
-    {
-        return j;
-    }
+    
     
     
     

@@ -16,6 +16,7 @@ public class IST412 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        viewtreatments.ViewTreatmentsCntl viewTreatC = new viewtreatments.ViewTreatmentsCntl();
     }
     
 }
