@@ -7,8 +7,8 @@ public class MainMenuCntl {
     private ViewTreatmentsCntl viewTreatmentsCntl;
     private final MainMenuView mainMenuView;
     
-    public MainMenuCntl() {
-        mainMenuView = new MainMenuView(this);
+    public MainMenuCntl(String username) {
+        mainMenuView = new MainMenuView(this, username);
         mainMenuView.setVisible(true);
     }
     

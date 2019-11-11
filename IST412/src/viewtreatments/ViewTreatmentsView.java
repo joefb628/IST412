@@ -72,7 +72,7 @@ public class ViewTreatmentsView implements ActionListener
         b1.setSize(50,50);
         b2.setSize(50,50);
         b3.setSize(50,50);
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         row = 0;
         String[] header = {"Treatments"};
         while(!treatments.isEmpty()){

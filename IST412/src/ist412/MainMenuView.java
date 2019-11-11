@@ -17,19 +17,19 @@ public class MainMenuView extends JFrame{
     
     private final MainMenuCntl mainMenuCntl;
     
-    public MainMenuView(MainMenuCntl mainMenuCntl) {
+    public MainMenuView(MainMenuCntl mainMenuCntl, String username) {
         this.mainMenuCntl = mainMenuCntl;
-        initComponents();
+        initComponents(username);
     }
     
-    private void initComponents() {
+    private void initComponents(String username) {
         setTitle("AlphaCare");
         setSize(1200, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         welcomePanel = new JPanel(new GridLayout(1, 1));
-        welcomePanel.add(new JLabel("<html><font size='4'>Welcome, User   </font></html>", JLabel.RIGHT));
+        welcomePanel.add(new JLabel("<html><font size='4'>Welcome, "+username+"   </font></html>", JLabel.RIGHT));
         
         namePanel = new JPanel(new GridLayout(1, 1));
         namePanel.add(new JLabel("<html><font size='8'>AlphaCare</font></html>", JLabel.CENTER));
