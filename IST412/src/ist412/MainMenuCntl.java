@@ -1,6 +1,7 @@
 package ist412;
 
 import viewtreatments.ViewTreatmentsCntl;
+import viewrecords.ViewCntl;
 
 public class MainMenuCntl {
     

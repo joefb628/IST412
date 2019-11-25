@@ -29,15 +29,15 @@ public class MainMenuView extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         welcomePanel = new JPanel(new GridLayout(1, 1));
-        welcomePanel.add(new JLabel("<html><font size='4'>Welcome, "+username+"   </font></html>", JLabel.RIGHT));
+        welcomePanel.add(new JLabel("<html><font size='4'>Welcome, "+ username + "</font></html>", JLabel.RIGHT));
         
         namePanel = new JPanel(new GridLayout(1, 1));
         namePanel.add(new JLabel("<html><font size='8'>AlphaCare</font></html>", JLabel.CENTER));
         
         buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         
-        JButton viewRecordsButton = new JButton("<html><font size='4'>View Medical Records (WIP)</font></html>");
-        //viewRecordsButton.addActionListener(event -> mainMenuCntl.openViewRecordsCntl());
+        JButton viewRecordsButton = new JButton("<html><font size='4'>View Medical Records</font></html>");
+        viewRecordsButton.addActionListener(event -> mainMenuCntl.openViewRecordCntl());
         viewRecordsButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(viewRecordsButton);
         
