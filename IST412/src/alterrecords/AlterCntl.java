@@ -1,7 +1,5 @@
 package alterrecords;
 
-import viewrecords.Record;
-
 public final class AlterCntl {
     
     private final AlterUI alterUI;
@@ -12,8 +10,6 @@ public final class AlterCntl {
     private final int patientID2 = 002;
     private final String firstName2 = "Steve";
     private final String lastName2 = "Adams";
-    private final String birthdate = "11/21/1999";
-    private final String birthdate2 = "12/12/1996";
     
     
     /**
@@ -21,10 +17,10 @@ public final class AlterCntl {
      */
     public AlterCntl() {
         alterUI = new AlterUI(this);
-        record = new Record(patientID, firstName, lastName, birthdate);
+        record = new Record(patientID, firstName, lastName);
         System.out.println(loadRecord(record));
-        record.editRecord(patientID2, firstName2, lastName2, birthdate2);
-        System.out.println(loadRecord(record));
+        //record.editRecord(patientID2, firstName2, lastName2);
+        //System.out.println(loadRecord(record));
     }
     
     
@@ -46,6 +42,6 @@ public final class AlterCntl {
      */
     
     public void editRecord(int ID, String fName, String lName, String birthdate) {
-        record.setPatient(ID, fName, lName, birthdate);
+        //record.setPatient(ID, fName, lName);
     }
 }
