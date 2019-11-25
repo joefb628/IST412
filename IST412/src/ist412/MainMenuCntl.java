@@ -5,6 +5,7 @@ import viewtreatments.ViewTreatmentsCntl;
 public class MainMenuCntl {
     
     private ViewTreatmentsCntl viewTreatmentsCntl;
+    private ViewCntl viewRecordCntl;
     private final MainMenuView mainMenuView;
     
     public MainMenuCntl(String username) {
@@ -14,6 +15,10 @@ public class MainMenuCntl {
     
     public void openViewTreatmentsCntl() {
         viewTreatmentsCntl = new ViewTreatmentsCntl();
+    }
+    
+    public void openViewRecordCntl() {
+        viewRecordCntl = new ViewCntl();
     }
     
     public void closeApp() {
