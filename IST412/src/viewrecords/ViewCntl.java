@@ -7,13 +7,14 @@ public final class ViewCntl {
     private final int patientID = 001;
     private final String firstName = "John";
     private final String lastName = "Doe";
+    private final String birthdate = "10/20/1998";
     
     /**
      * This is the default constructor for the ViewCntl class.
      */
     public ViewCntl() {
         viewUI = new ViewUI(this);
-        record = new Record(patientID, firstName, lastName);
+        record = new Record(patientID, firstName, lastName, birthdate);
         System.out.println(loadRecord(record));
     }
     

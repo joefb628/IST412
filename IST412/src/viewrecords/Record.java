@@ -2,20 +2,17 @@ package viewrecords;
 
 public class Record {
     
-    private int patientID;
-    private String firstName;
-    private String lastName;
+    private Patient patient;
     
     /**
      * This is the default constructor for the Record class.
-     * @param ID
-     * @param fName
-     * @param lName
+     * @param patientID
+     * @param firstName
+     * @param lastName
+     * @param birthdate
      */
-    public Record(int ID, String fName, String lName) {
-        ID = patientID;
-        fName = firstName;
-        lName = lastName;
+    public Record(int patientID, String firstName, String lastName, String birthdate) {
+        this.patient = new Patient(patientID, firstName, lastName, birthdate);
     }
     
     /**
@@ -23,7 +20,7 @@ public class Record {
      * @return An int representing the patient ID from the record.
      */
     public int getPatientID() {
-        return patientID;
+        return patient.getPatientID();
     }
     
     /**
@@ -31,7 +28,7 @@ public class Record {
      * @return A string representing the first name from the record.
      */
     public String getFirstName() {
-        return firstName;
+        return patient.getFirstName();
     }
     
      /**
@@ -39,7 +36,16 @@ public class Record {
      * @return A string representing the last name from the record.
      */
     public String getLastName() {
-        return lastName;
+        return patient.getLastName();
     }
+
+    public void setPatient(int patientID, String firstName, String lastName, String birthdate) {
+        this.patient = new Patient(patientID, firstName, lastName, birthdate);
+    }
+
+    public void editRecord(int patientID, String firstName, String lastName, String birthdate) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 }
