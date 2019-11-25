@@ -17,27 +17,27 @@ public class MainMenuView extends JFrame{
     
     private final MainMenuCntl mainMenuCntl;
     
-    public MainMenuView(MainMenuCntl mainMenuCntl, String username) {
+    public MainMenuView(MainMenuCntl mainMenuCntl) {
         this.mainMenuCntl = mainMenuCntl;
-        initComponents(username);
+        initComponents();
     }
     
-    private void initComponents(String username) {
+    private void initComponents() {
         setTitle("AlphaCare");
         setSize(1200, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         welcomePanel = new JPanel(new GridLayout(1, 1));
-        welcomePanel.add(new JLabel("<html><font size='4'>Welcome, "+username+"   </font></html>", JLabel.RIGHT));
+        welcomePanel.add(new JLabel("<html><font size='4'>Welcome, User   </font></html>", JLabel.RIGHT));
         
         namePanel = new JPanel(new GridLayout(1, 1));
         namePanel.add(new JLabel("<html><font size='8'>AlphaCare</font></html>", JLabel.CENTER));
         
         buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         
-        JButton viewRecordsButton = new JButton("<html><font size='4'>View Medical Records (WIP)</font></html>");
-        //viewRecordsButton.addActionListener(event -> mainMenuCntl.openViewRecordsCntl());
+        JButton viewRecordsButton = new JButton("<html><font size='4'>View Medical Records</font></html>");
+        viewRecordsButton.addActionListener(event -> mainMenuCntl.openViewRecordCntl());
         viewRecordsButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(viewRecordsButton);
         
