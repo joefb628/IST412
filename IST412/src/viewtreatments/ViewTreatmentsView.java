@@ -11,7 +11,6 @@ import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.PriorityQueue;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,6 +21,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
+
 
 /**
  *
@@ -61,7 +61,7 @@ public class ViewTreatmentsView implements ActionListener
             
             return returnComp;
         }
-        };        
+        };
         jtf = new JTextField(20);
         jtf.setText("Enter Treatment");
         b1 = new JButton("Add");
@@ -98,7 +98,7 @@ public class ViewTreatmentsView implements ActionListener
         b3.addActionListener(this);
         jf.setVisible(true);
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == b1){

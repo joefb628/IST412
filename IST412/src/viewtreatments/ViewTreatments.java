@@ -5,7 +5,6 @@
  */
 package viewtreatments;
 
-import java.util.ArrayList;
 import java.util.PriorityQueue;
 
 /**
