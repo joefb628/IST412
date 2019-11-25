@@ -18,9 +18,12 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 
 /**
@@ -42,6 +45,7 @@ public class ViewTreatmentsView implements ActionListener
     JFrame jf;
     JFrame detailView;
     DefaultTableModel tableModel;
+    //private TableRowSorter<TableModel> rowSorter = new TableRowSorter<>(jt.getModel());
     
     public ViewTreatmentsView(PriorityQueue<String> treatments) {
         this.treatments = treatments;
@@ -74,6 +78,7 @@ public class ViewTreatmentsView implements ActionListener
         b3.setSize(50,50);
         jf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         row = 0;
+        
         String[] header = {"Treatments"};
         while(!treatments.isEmpty()){
             jt.setValueAt(treatments.remove(),row,0);
@@ -113,11 +118,18 @@ public class ViewTreatmentsView implements ActionListener
         if(e.getSource() == b3){
             for(int i = tableModel.getRowCount() - 1; i >= 0; --i){
                 for(int j = tableModel.getColumnCount() - 1; j >=0; --j){
-                    if(tableModel.getValueAt(i,j).equals(jtf.getText())){
+                    String x = tableModel.getValueAt(i,j).toString();
+                    if(Character.toString(x.charAt(0)).equals(jtf.getText())){
                         jt.setRowSelectionInterval(i,i);
                     }
                 }
             }
+            /*String text = jtf.getText();
+            if (text.trim().length() == 0) {
+                rowSorter.setRowFilter(null);
+            } else {
+            rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
+            }*/
         }
     }
 
