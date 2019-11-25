@@ -40,17 +40,18 @@ public class MainMenuView extends JFrame{
         viewRecordsButton.addActionListener(event -> mainMenuCntl.openViewRecordCntl());
         viewRecordsButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(viewRecordsButton);
-        
+        /*
         JButton alterRecordsButton = new JButton("<html><font size='4'>Alter Medical Records (WIP)</font></html>");
         //alterRecordsButton.addActionListener(event -> mainMenuCntl.openAlterRecordsCntl());
         alterRecordsButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(alterRecordsButton);
+                */
         
         JButton viewTreatmentsButton = new JButton("<html><font size='4'>View Treatments</font></html>");
         viewTreatmentsButton.addActionListener(event -> mainMenuCntl.openViewTreatmentsCntl());
         viewTreatmentsButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(viewTreatmentsButton);
-        
+        /*
         JButton scheduleTreatmentsButton = new JButton("<html><font size='4'>Schedule Treatments (WIP)</font></html>");
         //scheduleTreatmentsButton.addActionListener(event -> mainMenuCntl.openScheduleTreatmentsCntl());
         scheduleTreatmentsButton.setPreferredSize(new Dimension(150, 75));
@@ -60,7 +61,7 @@ public class MainMenuView extends JFrame{
         //calcInsuranceCoverageButton.addActionListener(event -> mainMenuCntl.openCalcInsuranceCoverageCntl());
         calcInsuranceCoverageButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(calcInsuranceCoverageButton);
-        
+        */
         JButton closeButton = new JButton("<html><font size='4'>Exit</font></html>");
         closeButton.addActionListener(event -> mainMenuCntl.closeApp());
         closeButton.setPreferredSize(new Dimension(150, 75));
