@@ -27,7 +27,7 @@ public class ViewUI extends JFrame{
         setTitle("Here is Your Medical Record");
         setSize(1500, 200);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
         headerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         
