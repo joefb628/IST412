@@ -24,6 +24,11 @@ public class MainMenuCntl {
         viewRecordCntl = new ViewCntl();
     }
     
+    public void openAlterRecord() {
+    viewRecordCntl = new ViewCntl();
+    viewRecordCntl.openAlterRecord();
+    }
+    
     public void openCalcInsuranceCoverageCntl(){
         doctorCntl = new DoctorCntl();
     }
