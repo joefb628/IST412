@@ -13,19 +13,17 @@ public class Record {
     
     /**
      * This is the default constructor for the Record class.
-     * @param ID
-     * @param fName
-     * @param lName
+     * @param recordInfo
      */
-    public Record(int ID, String fName, String lName, String add, String birth, String phone, String sym, String emer) {
-        ID = patientID;
-        fName = firstName;
-        lName = lastName;
-        add = address;
-        birth = birthDate;
-        phone = phoneNumber;
-        sym = symptoms;
-        emer = emergency;
+    public Record(String[] recordInfo) {
+        patientID = Integer.parseInt(recordInfo[0]);
+        firstName = recordInfo[1];
+        lastName = recordInfo[2];
+        address = recordInfo[3];
+        birthDate = recordInfo[4];
+        phoneNumber = recordInfo[5];
+        symptoms = recordInfo[6];
+        emergency = recordInfo[7];
     }
     
     /**
@@ -84,7 +82,7 @@ public class Record {
         return symptoms;
     }
     
-         /**
+    /**
      * Returns the emergency contact from the record.
      * @return A string representing the emergency contact from the record.
      */
@@ -92,4 +90,67 @@ public class Record {
         return emergency;
     }
     
+    /**
+     * Edits the patient ID record.
+     * @param newPatientID Sets the patient ID for the record.
+     */
+    public void setPatientID(int newPatientID) {
+        this.patientID = newPatientID;
+    }
+   
+    /**
+     * Edits the first name record.
+     * @param newFirstName Sets the first name for the record.
+     */
+    public void setFirstName(String newFirstName) {
+        this.firstName = newFirstName;
+    }
+    
+    /**
+     * Edits the last name record.
+     * @param newLastName Sets the last name for the record.
+     */
+    public void setLastName(String newLastName) {
+        this.lastName = newLastName;
+    }
+    
+    /**
+     * Edits the address record.
+     * @param newAddress Sets the address for the record.
+     */
+    public void setAddress(String newAddress) {
+        this.address = newAddress;
+    }
+    
+    /**
+     * Edits the birth date record.
+     * @param newBirthDate Sets the birth date for the record.
+     */
+    public void setBirthDate(String newBirthDate) {
+        this.birthDate = newBirthDate;
+    }
+    
+    /**
+     * Edits the phone number record.
+     * @param newPhoneNumber Sets the phone number for the record.
+     */
+    public void setPhoneNumber(String newPhoneNumber) {
+        this.phoneNumber = newPhoneNumber;
+    }
+    
+    /**
+     * Edits the symptoms record.
+     * @param newSymptoms Sets the symptoms for the record.
+     */
+    public void setSymptoms(String newSymptoms) {
+        this.symptoms = newSymptoms;
+    }
+    
+    /**
+     * Edits the emergency record.
+     * @param newEmergency Sets the emergency for the record.
+     */
+    public void setEmergency(String newEmergency) {
+        this.emergency = newEmergency;
+    }
 }
