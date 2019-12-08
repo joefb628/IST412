@@ -36,6 +36,7 @@ public class LoginView extends JFrame implements ActionListener{
     public LoginView(LoginCntl loginCntl) {
         this.loginCntl = loginCntl;
         initComponents();
+        
     }
     
     private void initComponents(){
@@ -43,23 +44,27 @@ public class LoginView extends JFrame implements ActionListener{
         setSize(1200,300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setLayout(null);
         
         loginMessage = new JPanel(new GridLayout(1,1));
         loginMessage.add(new JLabel("<html><font size='8'>Please Type in Your Username And Password</font></html>",JLabel.CENTER));
         
         usernamePanel = new JPanel(new GridLayout(1,1));
+        usernamePanel = new JPanel();
         usernameField = new JTextField();
-        usernameField.setPreferredSize(new Dimension(10,10));
+        usernameField.setPreferredSize(new Dimension(200,30));
+        usernameField.setSize(100, 100);
         usernamePanel.add(new JLabel("<html><font size='8'>Username</font></html>",JLabel.CENTER));
         usernamePanel.add(usernameField);
         
         passwordField = new JTextField();
-        passwordField.setPreferredSize(new Dimension(10,10));
+        passwordField.setPreferredSize(new Dimension(200,30));
         usernamePanel.add(new JLabel("<html><font size='8'>Password</font></html>",JLabel.CENTER));
         usernamePanel.add(passwordField);
         
         buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         loginButton = new JButton("<html><font size='8'>Login</font></html>");
+        loginButton.setPreferredSize(new Dimension(150,50));
         loginButton.addActionListener(this);
         errorField = new JTextField();
         errorField.setPreferredSize(new Dimension(100,30));
