@@ -36,28 +36,17 @@ public class MainMenuView extends JFrame{
         
         buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         
-        JButton viewRecordsButton = new JButton("<html><font size='4'>View Medical Records</font></html>");
+        JButton viewRecordsButton = new JButton("<html><font size='4'>View/Alter Medical Records</font></html>");
         viewRecordsButton.addActionListener(event -> mainMenuCntl.openViewRecordCntl());
         viewRecordsButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(viewRecordsButton);
-        /*
-        JButton alterRecordsButton = new JButton("<html><font size='4'>Alter Medical Records (WIP)</font></html>");
-        //alterRecordsButton.addActionListener(event -> mainMenuCntl.openAlterRecordsCntl());
-        alterRecordsButton.setPreferredSize(new Dimension(150, 75));
-        buttonPanel.add(alterRecordsButton);
-                */
-        
+
         JButton viewTreatmentsButton = new JButton("<html><font size='4'>View Treatments</font></html>");
         viewTreatmentsButton.addActionListener(event -> mainMenuCntl.openViewTreatmentsCntl());
         viewTreatmentsButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(viewTreatmentsButton);
-        /*
-        JButton scheduleTreatmentsButton = new JButton("<html><font size='4'>Schedule Treatments (WIP)</font></html>");
-        //scheduleTreatmentsButton.addActionListener(event -> mainMenuCntl.openScheduleTreatmentsCntl());
-        scheduleTreatmentsButton.setPreferredSize(new Dimension(150, 75));
-        buttonPanel.add(scheduleTreatmentsButton);
-        */
-        JButton calcInsuranceCoverageButton = new JButton("<html><font size='4'>Calculate Insurance Coverage (WIP)</font></html>");
+
+        JButton calcInsuranceCoverageButton = new JButton("<html><font size='4'>Calculate Insurance Coverage</font></html>");
         calcInsuranceCoverageButton.addActionListener(event -> mainMenuCntl.openCalcInsuranceCoverageCntl());
         calcInsuranceCoverageButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(calcInsuranceCoverageButton);
