@@ -39,6 +39,12 @@ public class DoctorUI implements ActionListener{
     }
     public void actionPerformed(ActionEvent e){
         String val = (String)insuranceList.getSelectedValue();
+        if (val == null)
+        {
+            val = "error";
+            
+        }
+        //System.out.println(val);
         if(val.equals("Cigna")){
             double d = Math.random()*((1000-800)+1)+800;
             String s = Double.valueOf(Math.floor(d*100)/100).toString();
@@ -53,6 +59,7 @@ public class DoctorUI implements ActionListener{
             costField.setText("$"+s);
         }else{
             System.out.println("error");
+            costField.setText("error");
         }
     }
 }
