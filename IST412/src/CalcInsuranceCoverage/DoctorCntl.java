@@ -13,6 +13,7 @@ public class DoctorCntl {
     Doctor doctor = new Doctor(0, "ABC1", "ABC1", "treatment");
     
     public DoctorCntl(){
-       
+       Doctor d = new Doctor();
+       DoctorUI dv = new DoctorUI();
     }
 }

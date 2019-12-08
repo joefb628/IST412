@@ -16,6 +16,9 @@ public class Doctor {
     private String treatment;
     
     //constructor for doctor model class
+    public Doctor(){
+        
+    }
     public Doctor(int doctorID, String patientID, String insuranceID, String treatment){
         this.doctorID = doctorID;
         this.patientID = patientID;

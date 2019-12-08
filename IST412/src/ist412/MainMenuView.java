@@ -56,12 +56,12 @@ public class MainMenuView extends JFrame{
         //scheduleTreatmentsButton.addActionListener(event -> mainMenuCntl.openScheduleTreatmentsCntl());
         scheduleTreatmentsButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(scheduleTreatmentsButton);
-        
+        */
         JButton calcInsuranceCoverageButton = new JButton("<html><font size='4'>Calculate Insurance Coverage (WIP)</font></html>");
-        //calcInsuranceCoverageButton.addActionListener(event -> mainMenuCntl.openCalcInsuranceCoverageCntl());
+        calcInsuranceCoverageButton.addActionListener(event -> mainMenuCntl.openCalcInsuranceCoverageCntl());
         calcInsuranceCoverageButton.setPreferredSize(new Dimension(150, 75));
         buttonPanel.add(calcInsuranceCoverageButton);
-        */
+        
         JButton closeButton = new JButton("<html><font size='4'>Exit</font></html>");
         closeButton.addActionListener(event -> mainMenuCntl.closeApp());
         closeButton.setPreferredSize(new Dimension(150, 75));
